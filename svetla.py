@@ -1,10 +1,16 @@
+import time
 import turtle
+
+
+lights = input('type\'on\' if u want lights on: ')
+
+
 
 #screen, background and title
 wn = turtle.Screen()
 wn.bgcolor('black')
 wn.title('carlights')
-
+#FRONT
 #drwing a box for front left light
 penleft = turtle.Turtle()
 penleft.color('white')
@@ -65,6 +71,7 @@ yellowright.color('grey')
 yellowright.shapesize(2.3,1.5,)
 yellowright.goto(284,175)
 
+#BACK
 #drwing a box for back left light
 penleft2 = turtle.Turtle()
 penleft2.color('red')
@@ -125,4 +132,43 @@ yellowright2.color('grey')
 yellowright2.shapesize(2.3,1.5,)
 yellowright2.goto(234,-225)
 
+if lights=='on':
+    whiteleft.color('white')
+    whiteright.color('white')
 
+
+yellow = input('type \'on\' to turn on the turning lights: ')
+count=0
+if yellow=='on':
+    while count<5:
+
+        yellowleft.color('yellow')
+        yellowright.color('yellow')
+        yellowleft2.color('yellow')
+        yellowright2.color('yellow')
+
+        start_time1 = time.time()
+        seconds1 = 1
+        
+        while True:#loop for dealy of 2seconds before taffic ligth turns green
+            current_time1 = time.time()
+            elapsed_time1 = current_time1 - start_time1
+
+            if elapsed_time1 >= seconds1:
+                yellowleft.color('grey')
+                yellowright.color('grey')
+                yellowleft2.color('grey')
+                yellowright2.color('grey')
+                break
+        start_time2 = time.time()
+        seconds3 = 1
+
+        while True:#loop for after 10seconds the lights will change and then the whole loop will start over
+            current_time = time.time()
+            elapsed_time = current_time - start_time2
+
+            if elapsed_time >= seconds3:
+                count = count+1
+                break           
+i = input()
+ #make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turno on
