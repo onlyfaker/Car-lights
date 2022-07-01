@@ -2,9 +2,8 @@ import time
 import turtle
 
 
+
 lights = input('type\'on\' if u want lights on: ')
-
-
 
 #screen, background and title
 wn = turtle.Screen()
@@ -132,6 +131,7 @@ yellowright2.color('grey')
 yellowright2.shapesize(2.3,1.5,)
 yellowright2.goto(234,-225)
 
+#LOOOPS
 if lights=='on':
     whiteleft.color('white')
     whiteright.color('white')
@@ -171,4 +171,5 @@ if yellow=='on':
                 count = count+1
                 break           
 i = input()
- #make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turno on
+#make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turn on
+
