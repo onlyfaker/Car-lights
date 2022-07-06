@@ -1,7 +1,9 @@
+import keyboard
+
+
+import keyboard
 import time
 import turtle
-
-
 
 lights = input('type\'on\' if u want lights on: ')
 
@@ -137,10 +139,10 @@ if lights=='on':
     whiteright.color('white')
 
 
-yellow = input('type \'on\' to turn on the turning lights: ')
+yellow = input('type \'on\' to turn on all  turning lights: ')
 count=0
 if yellow=='on':
-    while count<5:
+    while True:
 
         yellowleft.color('yellow')
         yellowright.color('yellow')
