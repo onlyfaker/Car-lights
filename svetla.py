@@ -1,7 +1,4 @@
 import keyboard
-
-
-import keyboard
 import time
 import turtle
 
