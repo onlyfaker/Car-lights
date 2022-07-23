@@ -149,7 +149,7 @@ if yellow=='on':
         start_time1 = time.time()
         seconds1 = 1
         
-        while True:#loop for dealy of 2seconds before taffic ligth turns green
+        while True:#loop for dealy of 1seconds ligths turn on
             current_time1 = time.time()
             elapsed_time1 = current_time1 - start_time1
 
