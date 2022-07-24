@@ -1,6 +1,7 @@
-import keyboard
 import time
 import turtle
+
+import keyboard
 
 lights = input('type\'on\' if u want lights on: ')
 
@@ -140,14 +141,21 @@ yellow = input('type \'on\' to turn on all  turning lights: ')
 count=0
 if yellow=='on':
     while True:
+        start_time2 = time.time()
+        seconds3 = 0.8
+        while True:
+            current_time = time.time()
+            elapsed_time = current_time - start_time2
 
-        yellowleft.color('yellow')
-        yellowright.color('yellow')
-        yellowleft2.color('yellow')
-        yellowright2.color('yellow')
-
+            if elapsed_time >= seconds3:
+                yellowleft.color('yellow')
+                yellowright.color('yellow')
+                yellowleft2.color('yellow')
+                yellowright2.color('yellow')
+                break 
+        
         start_time1 = time.time()
-        seconds1 = 1
+        seconds1 = 0.8
         
         while True:#loop for dealy of 1seconds ligths turn on
             current_time1 = time.time()
@@ -159,16 +167,11 @@ if yellow=='on':
                 yellowleft2.color('grey')
                 yellowright2.color('grey')
                 break
-        start_time2 = time.time()
-        seconds3 = 1
-
-        while True:#loop for after 10seconds the lights will change and then the whole loop will start over
-            current_time = time.time()
-            elapsed_time = current_time - start_time2
-
-            if elapsed_time >= seconds3:
-                count = count+1
-                break           
+        
+while True:
+    if keyboard.wait() == "a":
+        print("You pressed p")
+        break                 
 i = input()
 #make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turn on
 
