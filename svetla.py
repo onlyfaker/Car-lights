@@ -167,11 +167,7 @@ if yellow=='on':
                 yellowleft2.color('grey')
                 yellowright2.color('grey')
                 break
-        
-while True:
-    if keyboard.wait() == "a":
-        print("You pressed p")
-        break                 
+                     
 i = input()
 #make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turn on
 
