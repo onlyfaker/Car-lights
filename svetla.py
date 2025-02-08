@@ -1,6 +1,7 @@
 import time
 import turtle
-
+#TODO make turning light on and off by pressing arrow keys, also when space is pressed make the break lights turn on
+#TODO make an 'off' option for turning off the lights
 
 lights = input('type\'on\' if u want lights on: ')
 
@@ -156,7 +157,7 @@ if yellow=='on':
         start_time1 = time.time()
         seconds1 = 0.8
         
-        while True:#loop for dealy of 1seconds ligths turn on
+        while True:#loop for dealy of 1second ligths turn on
             current_time1 = time.time()
             elapsed_time1 = current_time1 - start_time1
 
@@ -168,5 +169,4 @@ if yellow=='on':
                 break
                      
 i = input()
-#make turning light on and off by opressing arrow keys, also when space is pressed make the break lights turn on
 
