@@ -1,7 +1,6 @@
 import time
 import turtle
 
-import keyboard
 
 lights = input('type\'on\' if u want lights on: ')
 
